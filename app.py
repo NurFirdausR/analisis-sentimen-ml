@@ -14,7 +14,7 @@ st.write("Aplikasi Machine Learning menggunakan algoritma **TF-IDF** dan **Multi
 # 1. Load Dataset & Training Model (di-cache agar cepat)
 @st.cache_resource
 def load_and_train():
-    df = pd.read_csv("datasetml.csv")
+    df = pd.read_csv("datasetml.csv", sep=';')
     
     # Split data latih (80%) dan data uji (20%)
     X_train, X_test, y_train, y_test = train_test_split(
